@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="47f13ca7-14dc-417f-aba3-08360cd8dc43" name="Azure App Service" url="http://waws-prod-blu-545.ftp.azurewebsites.windows.net">
+        <fileTransfer rootFolder="/site/wwwroot" accessType="FTPS" host="waws-prod-blu-545.ftp.azurewebsites.windows.net" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,6 @@
+@TrainEase_HostAddress = http://localhost:5233
+
+GET {{TrainEase_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
