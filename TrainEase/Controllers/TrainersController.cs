@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using TrainEase.Data;
@@ -41,20 +43,45 @@ namespace TrainEase.Controllers
 
         [HttpPost]
         [SwaggerOperation(Summary = "Crea un nuevo trainer", Description = "Añade un nuevo trainer a la base de datos.")]
-        public async Task<ActionResult<Trainer>> PostTrainer(Trainer trainer)
+        public async Task<ActionResult<Trainer>> PostTrainer([FromForm] Trainer trainer, IFormFile profilePicture)
         {
+            if (profilePicture != null)
+            {
+                var filePath = Path.Combine("wwwroot/images", profilePicture.FileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await profilePicture.CopyToAsync(stream);
+                }
+
+                trainer.ProfilePictureUrl = $"/images/{profilePicture.FileName}";
+            }
+
             _context.Trainers.Add(trainer);
             await _context.SaveChangesAsync();
+
             return CreatedAtAction(nameof(GetTrainer), new { id = trainer.Id }, trainer);
         }
 
         [HttpPut("{id}")]
         [SwaggerOperation(Summary = "Actualiza un trainer", Description = "Actualiza los detalles de un trainer existente.")]
-        public async Task<IActionResult> PutTrainer(int id, Trainer trainer)
+        public async Task<IActionResult> PutTrainer(int id, [FromForm] Trainer trainer, IFormFile profilePicture)
         {
             if (id != trainer.Id)
             {
                 return BadRequest();
+            }
+
+            if (profilePicture != null)
+            {
+                var filePath = Path.Combine("wwwroot/images", profilePicture.FileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await profilePicture.CopyToAsync(stream);
+                }
+
+                trainer.ProfilePictureUrl = $"/images/{profilePicture.FileName}";
             }
 
             _context.Entry(trainer).State = EntityState.Modified;

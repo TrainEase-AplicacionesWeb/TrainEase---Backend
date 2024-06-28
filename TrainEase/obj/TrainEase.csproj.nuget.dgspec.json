@@ -1,25 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\rider proyect\\TrainEase\\TrainEase\\TrainEase.csproj": {}
+    "D:\\githubopen\\TrainEase---Backend\\TrainEase\\TrainEase.csproj": {}
   },
   "projects": {
-    "D:\\rider proyect\\TrainEase\\TrainEase\\TrainEase.csproj": {
+    "D:\\githubopen\\TrainEase---Backend\\TrainEase\\TrainEase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\rider proyect\\TrainEase\\TrainEase\\TrainEase.csproj",
+        "projectUniqueName": "D:\\githubopen\\TrainEase---Backend\\TrainEase\\TrainEase.csproj",
         "projectName": "TrainEase",
-        "projectPath": "D:\\rider proyect\\TrainEase\\TrainEase\\TrainEase.csproj",
+        "projectPath": "D:\\githubopen\\TrainEase---Backend\\TrainEase\\TrainEase.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\rider proyect\\TrainEase\\TrainEase\\obj\\",
+        "outputPath": "D:\\githubopen\\TrainEase---Backend\\TrainEase\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -96,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

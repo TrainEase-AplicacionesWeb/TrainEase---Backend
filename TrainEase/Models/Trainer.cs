@@ -7,5 +7,6 @@ namespace TrainEase.Models
         public string Specialization { get; set; } = string.Empty;
         public string Contact { get; set; } = string.Empty;
         public bool IsOnlineAvailable { get; set; }
+        public string ProfilePictureUrl { get; set; } = string.Empty;
     }
 }

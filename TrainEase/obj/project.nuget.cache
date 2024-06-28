@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2NsfjYg5G7kxFyhfNgXCKAHycKSEu0CX8Ua0b0EaatfPwSZFviqU/llkgUNq31mIAkD5ONstUELnFkpxBdsgww==",
+  "dgSpecHash": "e+pitI0RNII=",
   "success": true,
-  "projectFilePath": "D:\\rider proyect\\TrainEase\\TrainEase\\TrainEase.csproj",
+  "projectFilePath": "D:\\githubopen\\TrainEase---Backend\\TrainEase\\TrainEase.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\entityframeworkcore.createdupdateddate\\8.0.0\\entityframeworkcore.createdupdateddate.8.0.0.nupkg.sha512",
